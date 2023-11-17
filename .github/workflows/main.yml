@@ -21,8 +21,8 @@ jobs:
       - name: Docker Login
         uses: docker/login-action@v3.0.0
         with:
-          username: ${{ secrets.devkuk123 }}
-          password: ${{ secrets.1234567890 }}
+          username: ${{ secrets.docker_username }}
+          password: ${{ secrets.docker_password }}
       
       - name: Docker push
         run: docker push devkuk123/docker-github:${GITHUB_RUN_NUMBER}
